@@ -1,0 +1,39 @@
+<div id="dynamicModal" class="modal fade show" tabindex="-1" aria-modal="true" role="dialog" style="display:block;">
+  <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeIn">
+    <div class="modal-content">
+      <div class="modal-header py-4">
+        <button type="button" class="btn-close border border-2 border-warning rounded-circle" onclick="closeModal()"></button>
+      </div>
+      <div class="modal-body ">
+        <form>
+          <div class="mb-3 text-center">
+            <h5 class="modal-title fs-2 text-decoration-underline fw-bold">Log In</h5>
+
+          </div>
+          
+          <div class="mb-3">
+              <label class="form-label fw-bold">User</label>
+              <input type="text" class="form-control p-3" placeholder="Enter your email or phone">
+          </div>
+
+          <div class="mb-2">
+              <label class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control p-3 " placeholder="Enter your password">
+          </div>
+
+          <div class="d-flex justify-content-between mb-3">
+              <div></div> <!-- Empty div for spacing -->
+              <a href="#" class="text-decoration-none pt-3 text-danger pb-4 fw-bolder">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100 p-2 fs-4 rounded-pill">Log In</button>
+
+          <div class="d-flex justify-content-center my-3">
+              <p class="mb-0">Don't have an account?</p>
+              <a href="#"  onclick="loadModal('signup.html')" class="text-decoration-underline ms-1 fw-bold">Sign Up</a>
+          </div>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
