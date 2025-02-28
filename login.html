@@ -1,39 +1,88 @@
 <div id="dynamicModal" class="modal fade show" tabindex="-1" aria-modal="true" role="dialog" style="display:block;">
-  <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeIn">
-    <div class="modal-content">
-      <div class="modal-header py-4">
-        <button type="button" class="btn-close border border-2 border-warning rounded-circle" onclick="closeModal()"></button>
+  <div class="modal-dialog modal-dialog-centered animate__animated animate__slideInUp">
+    <div class="modal-content shadow-lg rounded-4 border-0" style="background: linear-gradient(135deg,  #a57623, #3d3d2e); color: white;">
+      
+      <div class="modal-header py-4 border-0">
+        <button type="button" class="btn-close bg-white opacity-100 border border-2 border-warning rounded-circle close-btn" 
+          onclick="closeModal()">
+        </button>
       </div>
-      <div class="modal-body ">
+
+      <div class="modal-body px-4">
         <form>
           <div class="mb-3 text-center">
-            <h5 class="modal-title fs-2 text-decoration-underline fw-bold">Log In</h5>
-
+            <h5 class="modal-title fs-1 fw-bold" style="font-family: 'Roboto', sans-serif; text-decoration: underline;">Log In</h5>
           </div>
-          
+
           <div class="mb-3">
-              <label class="form-label fw-bold">User</label>
-              <input type="text" class="form-control p-3" placeholder="Enter your email or phone">
+            <label class="form-label fw-bold">User</label>
+            <input type="text" class="form-control p-3 rounded-3 border-0" style="font-size: 1.1rem;" placeholder="Enter your email or phone">
           </div>
 
           <div class="mb-2">
-              <label class="form-label fw-bold">Password</label>
-              <input type="password" class="form-control p-3 " placeholder="Enter your password">
+            <label class="form-label fw-bold">Password</label>
+            <input type="password" class="form-control p-3 rounded-3 border-0" style="font-size: 1.1rem;" placeholder="Enter your password">
           </div>
 
-          <div class="d-flex justify-content-between mb-3">
-              <div></div> <!-- Empty div for spacing -->
-              <a href="#" class="text-decoration-none pt-3 text-danger pb-4 fw-bolder">Forgot Password?</a>
+          <div class="d-flex justify-content-end mb-4">
+            <a href="#" class="text-decoration-none text-danger fw-bold hover-link">Forgot Password?</a>
           </div>
 
-          <button type="submit" class="btn btn-success w-100 p-2 fs-4 rounded-pill">Log In</button>
+          <button type="submit" class="btn w-100 py-2 fs-4 rounded-pill text-white fw-bold login-btn">Log In</button>
 
           <div class="d-flex justify-content-center my-3">
-              <p class="mb-0">Don't have an account?</p>
-              <a href="#"  onclick="loadModal('signup.html')" class="text-decoration-underline ms-1 fw-bold">Sign Up</a>
+            <p class="mb-0">Don't have an account?</p>
+            <a href="#" onclick="loadModal('signup.html')" class="text-warning ms-2 fw-bold hover-link">Sign Up</a>
           </div>
-      </form>
+        </form>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  .login-btn {
+    background: linear-gradient(to right, #ff9800, #ffb74d);
+    background-size: 200% auto;
+    transition: background-position 0.4s ease-in-out, transform 0.2s ease-in-out;
+  }
+
+  .login-btn:hover {
+    background-position: right center;
+    transform: scale(1.05);
+  }
+
+  .close-btn {
+    transition: border-color 0.4s ease-in-out, box-shadow 0.3s;
+  }
+
+  .close-btn:hover {
+    border-color: #ffc107;
+    box-shadow: 0 0 10px #ffc107;
+  }
+
+  .hover-link {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .hover-link::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background: #ffc107;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .hover-link:hover {
+    color: #ffc107 !important;
+  }
+
+  .hover-link:hover::after {
+    width: 100%;
+  }
+</style>

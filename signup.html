@@ -1,75 +1,163 @@
 <div id="dynamicModal" class="modal fade show" tabindex="-1" aria-modal="true" role="dialog" style="display:block;">
-  <div class="modal-dialog modal-dialog-centered animate__animated animate__fadeIn">
-    <div class="modal-content">
-      <div class="modal-header py-4">
-        <button type="button" class="btn-close border border-2 border-warning rounded-circle"
-          onclick="closeModal()"></button>
+  <div class="modal-dialog modal-dialog-centered animate__animated animate__zoomIn">
+    <div class="modal-content shadow-lg rounded-4 border-0 animated-bg" style="color: white; overflow: hidden; position: relative;">
+      
+      <!-- Background Waves -->
+      <div class="wave-container">
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
       </div>
-      <div class="modal-body ">
+      
+      <!-- Modal Header -->
+      <div class="modal-header py-4 border-0 d-flex justify-content-end">
+        <button type="button" class="btn-close bg-white opacity-100 border border-2 border-warning rounded-circle close-btn" onclick="closeModal()"></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body px-4">
         <form>
+          <!-- Title -->
           <div class="mb-3 text-center">
-            <h5 class="modal-title fs-2 text-decoration-underline fw-bold">Sign Up</h5>
-
+            <h5 class="modal-title fs-1 fw-bold" style="font-family: 'Poppins', sans-serif; text-decoration: underline;">Sign Up</h5>
           </div>
 
-          <div class="mb-3">
-            <label class="form-label fw-bold">Full Name</label>
-            <input type="text" class="form-control p-2" placeholder="Enter your Full Name...">
+          <!-- Full Name & Email -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Full Name</label>
+              <input type="text" class="form-control p-3 rounded-3 border-0" placeholder="Enter Full Name...">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Email ID</label>
+              <input type="email" class="form-control p-3 rounded-3 border-0" placeholder="Enter Email...">
+            </div>
           </div>
 
-          <div class="mb-2">
-            <label class="form-label fw-bold">Email ID</label>
-            <input type="email" class="form-control p-2 " placeholder="Enter your Email...">
+          <!-- Mobile Number & Password -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Mobile Number</label>
+              <input type="number" class="form-control p-3 rounded-3 border-0" placeholder="Enter Mobile Number...">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Password</label>
+              <input type="password" class="form-control p-3 rounded-3 border-0" placeholder="Enter Password">
+            </div>
           </div>
 
-          <div class="mb-2">
-            <label class="form-label fw-bold">Mobile Number</label>
-            <input type="number" class="form-control p-2 " placeholder="Enter your Mobile Number...">
+          <!-- Education & Branch -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Select Education</label>
+              <select class="form-select p-3 rounded-3 border-0">
+                <option selected>Select Education</option>
+                <option value="1">BTech</option>
+                <option value="2">Degree</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Branch</label>
+              <select class="form-select p-3 rounded-3 border-0">
+                <option selected>Select Branch</option>
+                <option value="1">ECE</option>
+                <option value="2">CIVIL</option>
+                <option value="3">EEE</option>
+              </select>
+            </div>
           </div>
 
-          <div class="mb-2">
-            <label class="form-label fw-bold">Password</label>
-            <input type="password" class="form-control p-2 " placeholder="Enter your password">
+          <!-- Year -->
+          <div class="row mb-4">
+            <div class="col-md-6">
+              <label class="form-label fw-bold">Year</label>
+              <select class="form-select p-3 rounded-3 border-0">
+                <option selected>Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+              </select>
+            </div>
           </div>
 
-          <div class="mb-2">
-            <label class="form-label fw-bold">Select Education</label>
-            <select class="form-select form-select-md p-2 " aria-label=".form-select-lg example">
-              <option selected>Select Education</option>
-              <option value="1">Btech</option>
-              <option value="2">Degree</option>
-            </select>
-          </div>
+          <!-- Sign Up Button -->
+          <button type="submit" class="btn w-100 py-2 fs-4 rounded-pill text-white fw-bold sign-up-btn animated-btn">Sign Up</button>
 
-          <div class="mb-2">
-            <label class="form-label fw-bold">Branch</label>
-            <select class="form-select form-select-md p-2 " aria-label=".form-select-lg example">
-              <option selected>Select Branches</option>
-              <option value="1">ECE</option>
-              <option value="2">CIVIL</option>
-              <option value="3">EEE</option>
-            </select>
-          </div>
-
-          <div class="mb-2">
-            <label class="form-label fw-bold">Year</label>
-            <select class="form-select form-select-md p-2" aria-label=".form-select-lg example">
-              <option selected>Select Year</option>
-              <option value="1">1st Year</option>
-              <option value="2">2nd Year</option>
-              <option value="3">3rd Year</option>
-              <option value="4">4rd Year</option>
-            </select>
-          </div>
-
-          <button type="submit" class="btn btn-success w-100 p-2 mt-3 fs-4 rounded-pill">Sign UP</button>
-
+          <!-- Log In Link -->
           <div class="d-flex justify-content-center my-3">
             <p class="mb-0">Already have an account?</p>
-            <a href="#" onclick="loadModal('login.html')" class="text-decoration-underline ms-1 fw-bold">Log in</a>
+            <a href="#" onclick="loadModal('login.html')" class="text-warning ms-1 fw-bold hover-link">Log In</a>
           </div>
         </form>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  /* Animated Background with Waves */
+  .animated-bg {
+    background: linear-gradient(135deg, #a57623, #3d3d2e);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wave-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+  }
+
+  .wave {
+    position: absolute;
+    width: 200%;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0.5;
+    bottom: 0;
+    left: -50%;
+    border-radius: 50%;
+  }
+
+  .wave1 {
+    animation: waveMove 6s infinite linear;
+  }
+
+  .wave2 {
+    animation: waveMove 8s infinite linear;
+    opacity: 0.3;
+  }
+
+  .wave3 {
+    animation: waveMove 10s infinite linear;
+    opacity: 0.1;
+  }
+
+  @keyframes waveMove {
+    0% { transform: translateX(0) translateY(10px); }
+    50% { transform: translateX(-25%) translateY(0px); }
+    100% { transform: translateX(-50%) translateY(10px); }
+  }
+
+  /* Sliding Gradient Button with Animation */
+  .animated-btn {
+    background: linear-gradient(to right, #ff9800, #ffb74d);
+    background-size: 200% auto;
+    transition: background-position 0.4s ease-in-out, transform 0.2s ease-in-out;
+    animation: buttonFloat 3s infinite ease-in-out;
+  }
+
+  @keyframes buttonFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+  }
+
+  .animated-btn:hover {
+    background-position: right center;
+    transform: scale(1.1);
+  }
+</style>
