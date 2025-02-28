@@ -906,16 +906,290 @@ footer {
 }
 
 
+/* ---------- Responsive Styles ------------ */
+
+@media (max-width: 1340px) {
+
+    /* ---------- Header ------------ */
+    .navbar {
+        margin: 0 auto;
+        padding: 5px 10px;
+    }
+
+    .navbar .navbar-brand img {
+        width: 130px;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin: 0 5px;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 12px;
+    }
+
+    .navbar .buttons .triningregistration {
+        padding: 7px 10px;
+        font-size: 12px;
+        margin-left: 0px;
+    }
+
+    .navbar .buttons .Login {
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
 
 
 
-@media (max-width: 900px) {
-    .card-container {
+    .navbar .buttons .Sign {
+        width: 75px;
+        height: 30px;
+        margin-right: -55px;
+        font-size: 12px;
+        line-height: 1.2;
+    }
+
+    /* ------------ navbar end ----------- */
+
+
+    /* ---------- banner -------------- */
+
+    .banner {
+        margin-top: 55px;
+
+        img {
+            padding-bottom: 5px;
+        }
+    }
+
+    /* ---------- banner end-------------- */
+
+
+    .educational {
+
+        .educational-heading {
+            padding: 20px 0;
+
+            h1 {
+                font-size: 25px;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 12px;
+            }
+        }
+
+        .row {
+            .card {
+                height: 200px;
+                width: 100%;
+
+                .card-content {
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+
+                }
+
+                .right {
+                    justify-content: center;
+                    padding: 12px;
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+
+                    .card-title {
+                        font-size: 16px;
+                    }
+
+                    .card-text {
+                        font-size: 12px;
+                    }
+
+                    .btn {
+                        padding: 5px 10px;
+                        font-size: 12px;
+                    }
+                }
+
+            }
+
+        }
+
+        .card-scrolling {
+
+            padding: 20px;
+            margin-bottom: 30px;
+
+
+            .card-wrapper {
+                gap: 10px;
+            }
+
+            .card {
+                min-width: 350px;
+                height: 200px;
+                font-size: 12px;
+            }
+
+            .arrow {
+                margin: 0 20px;
+                padding: 10px;
+                border-radius: 20%;
+                font-size: 16px;
+            }
+
+        }
+    }
+
+    /* ----------------- */
+
+
+    /* ----------- footer ------------ */
+    footer {
+        padding: 30px;
+    }
+
+    footer {
+        .logo {
+            img {
+                margin-top: 0px;
+                width: 130px;
+            }
+
+            p {
+                font-size: 12PX;
+            }
+        }
+
+        .col-lg-3 {
+            h5 {
+                font-size: 16PX;
+            }
+        }
+
+        .text a {
+            font-size: 12PX;
+        }
+
+        .Usefull {
+            ul {
+                list-style: none;
+                li {
+                    font-size: 12px;
+                }
+            }
+
+            ul li i {
+                font-size: 12PX;
+            }
+
+            .icons {
+                margin-top: 8px;
+                display: flex;
+
+                a {
+                    margin: 0 3px;
+                    padding: 5px;
+                    width: 25px;
+                    height: 25px;
+
+                    i {
+                        font-size: 12px;
+                    }
+                }
+
+            }
+        }
+
+    }
+
+    /* ---- copy right ------- */
+    .copyright span {
+        font-size: 12px;
+    
+    }
+
+    /* ------ footer end -------- */
+
+
+
+}
+
+
+
+
+
+
+@media (max-width: 991px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide default navigation */
+    .navbar .navbar-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: url(../img/banner/hero-bg-desktop.png);
+        padding: 10px 0;
+    }
+
+    /* Show navigation when active */
+    .navbar .navbar-nav.active {
+        display: flex;
+    }
+
+    .navbar .navbar-nav .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 18px;
+        display: block;
+        padding: 10px;
+    }
+
+    .navbar .buttons {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    /* -------------- */
+    .educational-heading h1 {
+        font-size: 25px;
+    }
+
+    .educational-heading p {
+        font-size: 16px;
+    }
+
+    .educational .row {
         flex-direction: column;
         align-items: center;
     }
 
-    .card {
-        max-width: 90%;
+    .educational .row .card {
+        width: 90%;
+        height: 200px;
     }
+
+    .educational .card-scrolling .card {
+        min-width: 350px;
+        height: 240px;
+    }
+
 }
