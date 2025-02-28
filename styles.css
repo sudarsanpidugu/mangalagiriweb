@@ -20,7 +20,7 @@ body {
 
 /* ---------- Header ------------ */
 header {
-    background-image: url(/cardimg/background1.jpg);
+    background-image: url(/cardimg/backgrounds/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -41,7 +41,7 @@ header {
 /* Navbar Container */
 .navbar {
     width: 100%;
-    background-image: url(/cardimg/background1.jpg);
+    background-image: url(/cardimg/backgrounds/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -377,7 +377,7 @@ header {
 /* ----------- footer ------------ */
 footer {
     padding: 50px;
-    background: url(/cardimg/background1.jpg);
+    background: url(/cardimg/backgrounds/background1.jpg);
     background-size: cover;
 
     .footercontent {
@@ -471,7 +471,7 @@ footer {
 
 /* ---- copy right ------- */
 .copyright {
-    background: url(/cardimg/background1.jpg);
+    background: url(/cardimg/backgrounds/background1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
