@@ -9,20 +9,16 @@
         <div class="wave wave3"></div>
       </div>
       
-      <!-- Modal Header -->
       <div class="modal-header py-4 border-0 d-flex justify-content-end">
         <button type="button" class="btn-close bg-white opacity-100 border border-2 border-warning rounded-circle close-btn" onclick="closeModal()"></button>
       </div>
 
-      <!-- Modal Body -->
       <div class="modal-body px-4">
         <form>
-          <!-- Title -->
           <div class="mb-3 text-center">
             <h5 class="modal-title fs-1 fw-bold" style="font-family: 'Poppins', sans-serif; text-decoration: underline;">Sign Up</h5>
           </div>
 
-          <!-- Full Name & Email -->
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="form-label fw-bold">Full Name</label>
@@ -34,7 +30,6 @@
             </div>
           </div>
 
-          <!-- Mobile Number & Password -->
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="form-label fw-bold">Mobile Number</label>
@@ -46,7 +41,6 @@
             </div>
           </div>
 
-          <!-- Education & Branch -->
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="form-label fw-bold">Select Education</label>
@@ -67,7 +61,6 @@
             </div>
           </div>
 
-          <!-- Year -->
           <div class="row mb-4">
             <div class="col-md-6">
               <label class="form-label fw-bold">Year</label>
@@ -81,10 +74,8 @@
             </div>
           </div>
 
-          <!-- Sign Up Button -->
           <button type="submit" class="btn w-100 py-2 fs-4 rounded-pill text-white fw-bold sign-up-btn animated-btn">Sign Up</button>
 
-          <!-- Log In Link -->
           <div class="d-flex justify-content-center my-3">
             <p class="mb-0">Already have an account?</p>
             <a href="#" onclick="loadModal('login.html')" class="text-warning ms-1 fw-bold hover-link">Log In</a>
@@ -99,7 +90,7 @@
 
  
   .animated-bg {
-    background: linear-gradient(135deg, #a57623, #3d3d2e);
+    background: linear-gradient(135deg, #3e788d, #4a4a4a);
     position: relative;
     overflow: hidden;
   }
@@ -117,7 +108,7 @@
     position: absolute;
     width: 200%;
     height: 100px;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.448);
     opacity: 0.5;
     bottom: 0;
     left: -50%;
@@ -151,13 +142,13 @@
     animation: buttonFloat 3s infinite ease-in-out;
   }
 
-  @keyframes buttonFloat {
+  /* @keyframes buttonFloat {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-5px); }
-  }
+  } */
 
   .animated-btn:hover {
     background-position: right center;
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 </style>

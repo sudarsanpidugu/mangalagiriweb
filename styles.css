@@ -77,11 +77,7 @@ header {
     transition: color 0.3s ease-in-out;
 }
 
-.navbar .navbar-nav .active {
-    color: #000000;
-    background: #ffcc04;
-    border-radius: 5px;
-}
+
 
 .navbar .navbar-nav .nav-link:hover {
     color: #000000;
@@ -100,7 +96,7 @@ header {
 
 .navbar .buttons .triningregistration {
     position: relative;
-    background: rgb(250, 225, 171);
+    background: #eaebdc;
     color: #000000;
     padding: 7px 20px;
     font-size: 18px;
@@ -111,10 +107,10 @@ header {
 
 .navbar .buttons .Login {
     position: relative;
-    background: rgb(250, 225, 171);
+    background: #eaebdc;
     color: #000000;
     width: 120px;
-    height: 40px;
+    height: 41px;
     top: 50%;
     border-radius: 25px;
     padding-left: 56px;
@@ -129,11 +125,11 @@ header {
 
 .navbar .buttons .Sign {
     position: relative;
-    background-color: rgb(255, 201, 85) !important;
+    background-color: rgb(222, 176, 78) !important;
     color: #fff;
     width: 95px;
     text-align: center;
-    height: 40px;
+    height: 41px;
     top: 50%;
     border-radius: 25px;
     margin-right: -65px;
@@ -299,6 +295,7 @@ header {
         h1 {
             font-size: 30px;
         }
+
         .card-wrapper {
             display: flex;
             gap: 15px;
@@ -389,7 +386,6 @@ footer {
 footer {
     .logo {
         img {
-            margin-top: -15px;
             width: 200px;
         }
 
@@ -402,7 +398,7 @@ footer {
 
     .col-lg-3 {
         h5 {
-            color: #c0c0c0;
+            color: #d0cfcf;
             text-decoration: underline;
             font-style: italic;
             font-weight: bold;
@@ -415,7 +411,7 @@ footer {
     }
 
     .text a {
-        color: rgb(252, 220, 43);
+        color: rgb(133, 230, 235);
     }
 
     ul li a:hover {
@@ -428,7 +424,7 @@ footer {
         }
 
         ul li i {
-            color: rgb(250, 253, 32);
+            color: rgb(133, 230, 235);
             margin-right: 10px;
         }
 
@@ -444,24 +440,23 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 35px;
-                height: 35px;
+                width: 40px;
+                height: 40px;
 
                 i {
-                    color: #e5ff00;
+                    color: rgb(133, 230, 235);
                     font-weight: bold;
                     text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.247);
-                    font-size: 16px;
+                    font-size: 18px;
                 }
             }
 
             a:hover {
-                background: orange;
+                background: rgb(81, 82, 82);
                 box-shadow: 0px 0px 5px white;
 
                 i {
                     color: rgb(255, 255, 255);
-                    text-shadow: 1px 2px 3px white;
                 }
             }
         }
@@ -491,7 +486,7 @@ footer {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(125, 128, 129, 0.557);
+    background-color: rgba(0, 0, 0, 0.684);
 }
 
 
@@ -521,7 +516,7 @@ footer {
         text-decoration: underline;
 
         span {
-            color: #daa402;
+            color: #ca9818;
         }
     }
 
@@ -546,15 +541,14 @@ footer {
         width: 18%;
         text-align: center;
         box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        border-radius: 5px 40px;
-        transform: scale(1);
+        border-radius: 2px 40px 2px 40px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s;
         color: white;
-        background: linear-gradient(85deg, #7c7c7b, #e2b435);
+        background: linear-gradient(85deg, #928f77, #8e8962);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 220px;
+        height: 200px;
         position: relative;
         overflow: hidden;
     }
@@ -564,7 +558,7 @@ footer {
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
     }
 
-    .card::before {
+    /* .card::before {
         content: '';
         position: absolute;
         top: -50px;
@@ -574,7 +568,7 @@ footer {
         background: rgba(255, 255, 255, 0.3);
         border-radius: 50%;
         transition: transform 0.5s;
-    }
+    } */
 
     .card:hover::before {
         transform: scale(1.5);
@@ -595,14 +589,14 @@ footer {
         border-radius: 40px;
         font-weight: 600;
         padding: 8px 12px;
-        background-color: rgba(255, 255, 255, 0.3);
-        color: rgb(66, 64, 64);
+        background-color: rgba(255, 255, 255, 0.644);
+        color: rgb(13, 13, 13);
         text-decoration: none;
         transition: background-color 0.3s;
     }
 
     .learn-more:hover {
-        background-color: rgba(255, 255, 255, 0.778);
+        background-color: rgb(255, 255, 255);
     }
 }
 
@@ -701,70 +695,65 @@ footer {
     .filter {
 
         button {
-            font-size: 1.2rem;
-            background: none;
             border: none;
             position: relative;
-            --padding-block: .6rem;
-            --padding-inline: 3rem;
-            --arrow: 0rem;
-            margin: 0 10px;
-            --arrow-stripes: .8rem;
-
-            padding: var(--padding-block) var(--padding-inline);
+            margin: 0 5px;
+            background: #daa402;
+            padding: 5px 15px;
             filter: drop-shadow(4px 4px 4px hsl(0 0% 0% / .5));
             color: white;
-            border-radius: 999vmax 0 0 999vmax;
+            border-radius: 20px;
             cursor: pointer;
-            transition: all 125ms
         }
 
         button:hover {
-            color: #daa402;
+            background: #415c5d;
+            color: #fff;
+            transition: .5s;
+            transform: scale(1.05);
         }
 
         button:active {
             scale: .975;
         }
-
-        button::after {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: inherit;
-            z-index: -1;
-            background-color: green;
-            background-image: linear-gradient(transparent 50%, hsl(0 0% 0% / .5) 0);
-
-            --conic-stops: black 0 90deg, #0000 0;
-            --linear-stops: #0000 0px, black 1px var(--arrow-stripes), #0000 calc(var(--arrow-stripes) + 1px) calc(var(--arrow-stripes) * 2);
-            --mask-image:
-                conic-gradient(from 225deg at right, var(--conic-stops)),
-                conic-gradient(from 225deg at right, var(--conic-stops)),
-                repeating-linear-gradient(-135deg, var(--linear-stops)),
-                repeating-linear-gradient(-45deg, var(--linear-stops));
-            --mask-position-to: 0, 0, -100% 0, -100% 100%;
-            -webkit-mask-image: var(--mask-image);
-            -webkit-mask-composite: source-over, source-out, source-over, source-over;
-
-        }
-
-        @keyframes mask-position {
-            to {
-                -webkit-mask-position: var(--mask-position-to);
-                mask-position: var(--mask-position-to);
-            }
-        }
-
     }
 
     .row {
         margin: 20px 0;
         margin-bottom: 40px;
 
-        .card-title {
-            font-weight: bold;
+        .card {
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px lightsteelblue;
+
+            img {
+                width: 100%;
+                height: 170px;
+                padding: 5px;
+                box-shadow: 0px 0px 4px gray;
+                border-radius: 15px;
+                margin-bottom: 5px;
+            }
+
+            .card-title {
+                font-weight: bold;
+                color: #033f71;
+            }
+
+            .btn:hover {
+                background: #415c5d;
+                color: #fff;
+                font-weight: bold;
+                transform: scale(1.05);
+                transition: .5s;
+            }
+
+            .btn:active {
+                scale: .975;
+            }
         }
+
+
     }
 }
 
@@ -1137,7 +1126,7 @@ footer {
             }
         }
 
-        h1  {
+        h1 {
             font-size: 20px;
         }
 
@@ -1188,6 +1177,7 @@ footer {
             h1 {
                 font-size: 20px;
             }
+
             .videologo {
                 width: 30px;
             }
